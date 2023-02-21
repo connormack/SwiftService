@@ -1,12 +1,11 @@
-<?php include('partials/menu.php')?>
-
-<div class="main-content">
-<div class="wrapper">
-<h1>Manage Food</h1>
-<br>
+<?php include('partials/menu.php') ?>
+    <!-- This is the main section -->
+    <div class="main-content">
+    <div class ="wrapper">
+            <h1>Manage admin</h1>
             <br>
-  <!-- button for adding category -->
-  <a href="#" class="btn-primary"> Add Food </a>
+            <!-- button for adding admin -->
+            <a href="add-admin.php" class="btn-primary"> Add user </a>
             <br>
             <br>
             <table class="tbl-full">
@@ -47,8 +46,7 @@
                     </td>
                 </tr>
             </table>
-</div>
+        </div>
 </div>
 
-
-<?php include('partials/footer.php')?>
+    <?php include('partials/footer.php') ?>
