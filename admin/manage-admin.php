@@ -3,6 +3,17 @@
     <div class="main-content">
     <div class ="wrapper">
             <h1>Manage admin</h1>
+
+            <br>
+
+            <?php 
+            if(isset($_SESSION['add'])){
+
+                echo $_SESSION['add']; // display session message 
+                unset($_SESSION['add']); // removes session message 
+            }
+            ?>
+            <br>
             <br>
             <!-- button for adding admin -->
             <a href="add-admin.php" class="btn-primary"> Add user </a>
@@ -16,35 +27,51 @@
                 <th>Actions</th>
                 </tr>
 
+                <?php
+                // gets all admin 
+                $sql = "SELECT * FROM tbl_admin";
+                // run query 
+                $res = mysqli_query($conn, $sql);
+
+                //check if query workes
+                if($res==TRUE)
+                {
+                    // count rows to check if full data their 
+                    $count = mysqli_num_rows($res); // get all rows in DB
+
+                    // check num of rows 
+                    if($count > 0)
+                        {
+                        // data is in DB 
+                        while($rows=mysqli_fetch_assoc($res))
+                        {
+                        // loops through rows to get data from DB 
+                        $id = $rows['id'];
+                        $full_name=$rows['full_name'];
+                        $username=$rows['username'];
+
+                        // display values in table 
+
+                        ?>
+                        
                 <tr>
                     <td>1</td>
-                    <td>CM</td>
-                    <td>CM1</td>
+                    <td><?php echo $full_name ?></td>
+                    <td><?php echo $username ?></td>
                     <td>
                     <a href="#" class="btn-secondary">Update Admin</a>
                     <a href="#" class="btn-danger">Delete Admin</a>
                     </td>
                 </tr>
+                        <?php
 
-                <tr>
-                    <td>2</td>
-                    <td>CM</td>
-                    <td>CM1</td>
-                    <td>
-                        <a href="#" class="btn-secondary">Update Admin</a>
-                        <a href="#" class="btn-danger">Delete Admin</a>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>3</td>
-                    <td>CM</td>
-                    <td>CM1</td>
-                    <td>
-                    <a href="#" class="btn-secondary">Update Admin</a>
-                    <a href="#" class="btn-danger">Delete Admin</a>
-                    </td>
-                </tr>
+                        }
+                    }else{
+                        // no data in DB 
+                    }
+                    
+                }
+                ?>
             </table>
         </div>
 </div>

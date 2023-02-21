@@ -1,3 +1,5 @@
+<?php include("../config/constants.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +15,7 @@
         <div class ="wrapper">
             <ul>
                 <li><a href ='index.php'>Home</a></li>
-                <li><a href ='manager-admin.php'>Admin manager</a></li>
+                <li><a href ='manage-admin.php'>Admin manager</a></li>
                 <li><a href ='manage-category.php'>Category</a></li>
                 <li><a href ='manage-food.php'>Food</a></li>
                 <li><a href ='manage-order.php'>Order</a></li>
