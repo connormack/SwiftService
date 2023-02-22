@@ -78,6 +78,14 @@ table tr td{
     font: bold;
 }
 
+.success{
+    color: green;
+}
+
+.fail{
+    color: red;
+}
+
 
 .btn-danger:hover{
     background-color: red;
