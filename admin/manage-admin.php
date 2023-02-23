@@ -17,6 +17,11 @@
                 echo $_SESSION['delete'];
                 unset($_SESSION['delete']);
             }
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
             ?>
             <br>
             <br>
@@ -44,6 +49,8 @@
                     // count rows to check if full data their 
                     $count = mysqli_num_rows($res); // get all rows in DB
 
+                    $sn=1; // create var and assign the value 
+
                     // check num of rows 
                     if($count > 0)
                         {
@@ -60,14 +67,16 @@
                         ?>
                         
                 <tr>
-                    <td><?php echo $id ?></td>
-                    <td><?php echo $full_name ?></td>
-                    <td><?php echo $username ?></td>
+                    <td><?php echo $sn++; ?></td>
+                    <td><?php echo $full_name; ?></td>
+                    <td><?php echo $username; ?></td>
                     <td>
-                    <a href="#" class="btn-secondary">Update Admin</a>
-                    <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id ?>" class="btn-danger">Delete Admin</a>
+                    <a href="" class ="btn-primary">Change Password</a>
+                    <a href="<?php echo SITEURL;  ?>admin/update-admin.php?id=<?php echo $id;?>" class="btn-secondary">Update Admin</a>
+                    <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id;?>" class="btn-danger">Delete Admin</a>
                     </td>
                 </tr>
+                
                         <?php
 
                         }

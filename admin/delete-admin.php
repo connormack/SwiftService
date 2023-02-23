@@ -18,7 +18,7 @@ if($res == true)
 {
 //echo "Admin deleted";
 // session var to display message 
-$_SESSION['delete'] = "<div class='success'>Admin successfully deleted</div>";
+$_SESSION['delete'] = "<div class='success'>Admin successfully deleted.</div>";
 //redirect
 header('location:'.SITEURL.'admin/manage-admin.php');
 }
