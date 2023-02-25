@@ -17,6 +17,11 @@
             echo $_SESSION['login'];
             unset($_SESSION['login']);
         }
+        if(isset( $_SESSION['no-login-message']))
+        {
+            echo  $_SESSION['no-login-message'];
+            unset( $_SESSION['no-login-message']);
+        }
 
         ?>
         <br>
@@ -69,6 +74,9 @@ if(isset($_POST['submit']))
     if($count==1){
         //user found and logged in 
         $_SESSION['login'] = "<div class= 'success'> Login Success. </div>";
+        $_SESSION['user'] = $username; // check is user is loogin in and logout unsets it 
+
+
         // redirect to home page 
         header('location:' . SITEURL . 'admin/');
     }
