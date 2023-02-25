@@ -14,6 +14,12 @@
             unset($_SESSION["add"]);
         }
 
+        if(isset($_SESSION['upload']))
+        {
+            echo $_SESSION['upload'];
+            unset($_SESSION["upload"]);
+        }
+
         ?>
 
         <br>
@@ -104,6 +110,14 @@
                 // upload the image using image name, source path and destination path 
                 $image_name = $_FILES['image']['name'];
 
+                // renaming the image
+                // get the extension of image
+                // end takes the last part of the picture path eg .jpeg
+                $ext = end(explode('.', $image_name)); 
+
+                // rename the image
+                $image_name = "Food_Category_".rand(000, 999).'.'.$ext; // eg Food_Category_333.jpeg
+
                 $source_path = $_FILES['image']['tmp_name'];
 
                 $destination_path = "../images/category/".$image_name;
@@ -119,7 +133,7 @@
                     $_SESSION['upload'] = "<div class='fail'> Failed to upload image. </div>";
                     // redirect to add category page
                     header("location:".SITEURL."admin/add-category.php");
-                    // stop the process
+                    // stop
                     die();
                 }
 
@@ -134,6 +148,7 @@
             // create sql Query to insert category
             $sql = "INSERT INTO tbl_category SET
             title ='$title',
+            image_name = '$image_name',
             featured = '$featured',
             active= '$active'
             ";
