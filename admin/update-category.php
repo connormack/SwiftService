@@ -109,10 +109,27 @@
         </tr>  
         
         <tr>
+            <input type="hidden" name="current_image" value = "<?php echo $current_image;?>">
+            <input type="hidden" name="id" value = "<?php echo $id;?>">
             <input type="submit" name="submit" value="Update Category" class="btn-secondary">
         </tr>
         </table>
         </form>
+
+        <?php
+
+            if(isset($_POST['submit']))
+            {
+
+                // echo "button clicked";
+                // get form values 
+                $id = $_POST['id'];
+                $current_image = $_POST['current_image'];
+                $title = $_POST['title'];
+            }
+
+        ?>
+
     </div>
 </div>
 
