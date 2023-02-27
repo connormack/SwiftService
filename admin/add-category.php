@@ -46,15 +46,15 @@
             <tr>
                 <td>Featured: </td>
                 <td>
-                    <input type="radio" name="featured" value="yes"> Yes
-                    <input type="radio" name="featured" value="no"> No
+                    <input type="radio" name="featured" value="Yes"> Yes
+                    <input type="radio" name="featured" value="No"> No
                 </td>
             </tr>
             <tr>
                 <td>Active</td>
                 <td>
-                    <input type="radio" name="active" value="yes"> Yes
-                    <input type="radio" name="active" value="no"> No
+                    <input type="radio" name="active" value="Yes"> Yes
+                    <input type="radio" name="active" value="No"> No
                 </td>
             </tr>
             <tr>
@@ -110,24 +110,28 @@
                 // upload the image using image name, source path and destination path 
                 $image_name = $_FILES['image']['name'];
 
-                // renaming the image
-                // get the extension of image
-                // end takes the last part of the picture path eg .jpeg
-                $ext = end(explode('.', $image_name)); 
+                // only upload image if image is selected
+                if($image_name != ""){
 
-                // rename the image
-                $image_name = "Food_Category_".rand(000, 999).'.'.$ext; // eg Food_Category_333.jpeg
+                    // renaming the image
+                    // get the extension of image
+                    // end takes the last part of the picture path eg .jpeg
+                    $ext = end(explode('.', $image_name)); 
 
-                $source_path = $_FILES['image']['tmp_name'];
+                    // rename the image
+                    $image_name = "Food_Category_".rand(000, 999).'.'.$ext; // eg Food_Category_333.jpeg
 
-                $destination_path = "../images/category/".$image_name;
 
-                // upload the image
-                $upload = move_uploaded_file($source_path, $destination_path);
+                    $source_path = $_FILES['image']['tmp_name'];
 
-                // check if image is uploaded
-                // if image not uploaded stop and redirect and display eorror
-                if($upload==false)
+                    $destination_path = "../images/category/".$image_name;
+
+                    // upload the image
+                    $upload = move_uploaded_file($source_path, $destination_path);
+
+                    // check if image is uploaded
+                    // if image not uploaded stop and redirect and display eorror
+                    if($upload==false)
                 {
                     // set message 
                     $_SESSION['upload'] = "<div class='fail'> Failed to upload image. </div>";
@@ -137,6 +141,7 @@
                     die();
                 }
 
+                }
                 
             }
             else
