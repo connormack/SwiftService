@@ -93,8 +93,8 @@
                 Featured:
             </td>
             <td>
-                <input <?php if($featured == "yes"){echo "checked";}?> type="radio" name="featured" value="Yes"> Yes
-                <input <?php if($featured == "no"){echo "checked";}?> type="radio" name="featured" value="No"> No
+                <input <?php if($featured == "yes"){echo "checked";}?> type="radio" name="featured" value="yes"> yes
+                <input <?php if($featured == "no"){echo "checked";}?> type="radio" name="featured" value="no"> no
             </td>
         </tr>
 
@@ -103,8 +103,8 @@
                 Active:
             </td>
             <td>
-                <input <?php if($active == "yes"){echo "checked";}?> type="radio" name="active" value="Yes"> Yes
-                <input <?php if($active == "no"){echo "checked";}?> type="radio" name="active" value="No"> No
+                <input <?php if($active == "yes"){echo "checked";}?> type="radio" name="active" value="yes"> yes
+                <input <?php if($active == "no"){echo "checked";}?> type="radio" name="active" value="no"> no
             </td>
         </tr>  
         
@@ -126,6 +126,97 @@
                 $id = $_POST['id'];
                 $current_image = $_POST['current_image'];
                 $title = $_POST['title'];
+                $featured = $_POST['featured'];
+                $active = $_POST['active'];
+
+                // update the image when slected 
+                // check whether the image is selected
+                if(isset($_FILES['image']['name']))
+                {
+                    // get the image info
+                    $image_name = $_FILES['image']['name'];
+
+                    // check whether the image is available
+                    if($image_name != "")
+                    {
+                        // image available
+                        // upload the image
+
+                        // auto rename the image
+                        // get the extension of the image
+                        $ext = end(explode('.', $image_name));
+                        $image_name = "Food_Category_".rand(000, 999).'.'.$ext;
+
+                        $source_path = $_FILES['image']['tmp_name'];
+
+                        $destination_path = "../images/category/".$image_name;
+
+                        // upload the image
+                        $upload = move_uploaded_file($source_path, $destination_path);
+
+                        // check whether the image is uploaded
+                        if($upload == false)
+                        {
+                            // failed to upload
+                            $_SESSION['upload'] = "<div class='fail'>Failed to upload image.</div>";
+                            header("location:".SITEURL."admin/manage-category.php");
+                            die();
+                        }
+
+                        if($current_image != ""){
+
+                            
+                            // remove the image
+                            $remove_path = "../images/category/".$current_image;
+
+                            $remove = unlink("../images/category/".$current_image);
+
+                            // check if image removed 
+                            if($remove == false)
+                            {
+                                // failed to remove image
+                                $_SESSION['failed-remove'] = "<div class='fail'>Failed to remove current image.</div>";
+                                header("location:".SITEURL."admin/manage-category.php");
+                                die();
+                            }
+                        }
+                    }
+                    else
+                    {
+                        // image is not available
+                        $image_name = $current_image;
+                    }
+
+                }
+                else
+                {
+                    // don't update the image
+                    $image_name = $current_image;
+                }
+
+                // update db
+                $sql3 = "UPDATE tbl_category SET
+                    title = '$title',
+                    image_name = '$image_name',
+                    featured = '$featured',
+                    active = '$active'
+                    WHERE id = $id
+                    ";
+
+                // run query 
+                $res3 = mysqli_query($conn, $sql3);
+
+                // redirect and display message
+                if($res3 == true)
+                {
+                    $_SESSION['update'] = "<div class='success'>Category updated successfully.</div>";
+                    header("location:".SITEURL."admin/manage-category.php");
+                }
+                else
+                {
+                    $_SESSION['update'] = "<div class='fail'>Failed to update category.</div>";
+                    header("location:".SITEURL."admin/manage-category.php");
+                }
             }
 
         ?>

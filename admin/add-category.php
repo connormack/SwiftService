@@ -46,15 +46,15 @@
             <tr>
                 <td>Featured: </td>
                 <td>
-                    <input type="radio" name="featured" value="yes"> Yes
-                    <input type="radio" name="featured" value="no"> No
+                    <input type="radio" name="featured" value="yes"> yes
+                    <input type="radio" name="featured" value="no"> no
                 </td>
             </tr>
             <tr>
                 <td>Active</td>
                 <td>
-                    <input type="radio" name="active" value="yes"> Yes
-                    <input type="radio" name="active" value="no"> No
+                    <input type="radio" name="active" value="yes"> yes
+                    <input type="radio" name="active" value="no"> no
                 </td>
             </tr>
             <tr>
