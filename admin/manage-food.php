@@ -26,6 +26,11 @@
                 echo $_SESSION['unauthorised'];
                 unset($_SESSION['unauthorised']);
             }
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
 
 
             ?>
@@ -93,7 +98,7 @@
                         <td><?php echo $featured;?></td>
                         <td><?php echo $active;?></td>
                         <td>
-                        <a href="#" class="btn-secondary">Update Food</a>
+                        <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id;?>" class="btn-secondary">Update Food</a>
                         <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>"class="btn-danger">Delete Food</a>
                         </td>
                     </tr>
