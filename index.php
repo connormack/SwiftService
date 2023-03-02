@@ -5,7 +5,7 @@ include('partials-front/menu.php');
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search text-center">
       <div class="container">
-        <form action="food-search.html" method="POST">
+        <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
           <input
             type="search"
             name="search"
@@ -31,7 +31,7 @@ include('partials-front/menu.php');
         <?php 
 
         // sql query to disyplay categories
-        $sql = "SELECT * FROM tbl_category WHERE active='Yes' LIMIT 3";
+        $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 4";
         //run query
         $res = mysqli_query($conn, $sql);
 
@@ -48,7 +48,7 @@ include('partials-front/menu.php');
             $image_name = $row['image_name'];
             ?>
 
-            <a href="category-foods.html">
+            <a href="<?php echo SITEURL;?>category-foods.php?category_id=<?php echo $id ?>">
                 <div class="box-3 float-container">
                   <?php
 
@@ -145,7 +145,7 @@ include('partials-front/menu.php');
 
                 <div class="food-menu-desc">
                   <h4><?php echo $title; ?></h4>
-                  <p class="food-price"><?php echo $price; ?></p>
+                  <p class="food-price"><?php echo "£" . $price; ?></p>
                   <p class="food-detail">
                   <?php echo $description; ?>
                   </p>

@@ -4,7 +4,7 @@
     <section class="food-search text-center">
         <div class="container">
             
-            <form action="food-search.html" method="POST">
+            <form action="<?php echo SITEURL ?>food-search.php" method="POST">
                 <input type="search" name="search" placeholder="Search for Food.." required>
                 <input type="submit" name="submit" value="Search" class="btn btn-primary">
             </form>
@@ -70,7 +70,7 @@
 
                             <div class="food-menu-desc">
                                 <h4><?php echo $title;?> </h4>
-                                <p class="food-price"><?php echo $price;?></p>
+                                <p class="food-price"><?php echo "£" . $price;?></p>
                                 <p class="food-detail">
                                 <?php echo $description ?>
                                 </p>
@@ -89,7 +89,6 @@
                     // foods not found
                     echo "<div class='fail'>Food not found.</div>";
                 }
-                
 
             ?>
 
