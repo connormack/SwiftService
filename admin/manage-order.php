@@ -5,6 +5,17 @@
 <h1>Manage Order</h1>
             <br>
             <br>
+
+            <?php
+            if(isset($_SESSION['update']))
+            {
+                echo $_SESSION['update'];
+                unset($_SESSION['update']);
+            }
+            ?>
+            <br>
+            <br>
+
             <table class="tbl-full">
                 <tr>
                 <th>S.N</th>
@@ -61,18 +72,26 @@
                             <td>
                                 <?php
                                 // check if order is delivered
-                                if($status=="Delivered")
+                                if($status=="Ordered")
                                 {
                                     // order delivered
                                     echo "<label>$status</label>";
                                 }
-                                elseif($status=="On Delivery")
+                                elseif($status=="Preparing Order")
                                 {
                                     echo "<label style='color: orange;'>$status</label>";
                                 }
-                                else
+                                elseif($status=="Completed")
+                                {
+                                    echo "<label style='color: green;'>$status</label>";
+                                }
+                                elseif($status=="Cancelled")
                                 {
                                     echo "<label style='color: red;'>$status</label>";
+                                }
+                                else
+                                {
+                                    echo "<label style='color: black;'>$status</label>";
                                 }
                                 ?>
                             </td>
