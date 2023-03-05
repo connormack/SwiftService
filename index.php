@@ -73,7 +73,7 @@ include('partials-front/menu.php');
                   {
                     // image found 
                     ?>
-                    <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza"  class="img-responsive img-curve"/>
+                    <img src="<?php echo SITEURL; ?>images/category/<?php echo $image_name; ?>" alt="Pizza"  class="img-responsive img-curve img-size"/>
                     <?php
                   }
                   ?>
@@ -181,12 +181,10 @@ include('partials-front/menu.php');
       </div>
 
       <p class="text-center">
-        <a href="#">See All Foods</a>
+        <a href="<?php echo SITEURL;?>foods.php">See All Foods</a>
       </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->
 
   <?php include('partials-front/footer.php');?>
 
-  btnewhireteam@bt.com
-  btnewhireteam@bt.com

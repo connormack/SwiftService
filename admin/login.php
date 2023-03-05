@@ -59,8 +59,9 @@ if(isset($_POST['submit']))
 {
     // action log in 
     // get log in data from form
-    $username = $_POST['username'];
-    $password = md5($_POST['password']);
+    // escape string prevent sql injection
+    $username = mysqli_real_escape_string($conn, $_POST['username']);
+    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
 
     // sql query checks user name and password exist in db 
     $sql = "SELECT * FROM tbl_admin WHERE username='$username' and password='$password'";
