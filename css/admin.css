@@ -29,6 +29,7 @@ version: 1.0
 
 .tbl-full{
     width: 100%;
+    border: 1px solid black;
 }
 
 .tbl-30{
@@ -39,10 +40,13 @@ table tr th{
     border-bottom: 1px solid black;
     padding: 1%;
     text-align: left;
+    border-collapse: collapse;
 }
 
 table tr td{
     padding: 1%;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 
 .btn-primary{

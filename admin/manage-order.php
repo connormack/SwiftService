@@ -15,21 +15,21 @@
             ?>
             <br>
             <br>
-
+            <!-- &nbsp; white space tag  -->
             <table class="tbl-full">
                 <tr>
-                <th>S.N</th>
-                <th>Food</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>Order Date</th>
-                <th>Status</th>
-                <th>Customer Name</th>
-                <th>Customer Contact</th>
-                <th>Customer Email</th>
-                <th>Table Number</th>
-                <th>Actions</th>
+                <th>S.N &nbsp; &nbsp; </th>
+                <th>Food  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;   </th>
+                <th>Price &nbsp; &nbsp; </th>
+                <th>Quantity &nbsp; </th>
+                <th>Total&nbsp; &nbsp; &nbsp; </th>
+                <th>Order Date &nbsp; &nbsp;  </th>
+                <th>Status &nbsp; </th>
+                <th>Customer Name &nbsp; &nbsp; </th>
+                <th>Customer Contact &nbsp; </th>
+                <th>Customer Email &nbsp; </th>
+                <th>Table Number &nbsp; </th>
+                <th>Actions &nbsp;  </th>
                 </tr>
 
                 <?php
