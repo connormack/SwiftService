@@ -9,7 +9,7 @@
 
             ?>
             
-            <h2>Foods on Your Search <a href="#" class="text-white"><?php echo $search ?></a></h2>
+            <h2>Results for <a href="#" class="text-white"><?php echo "'". $search . "'" ?></a></h2>
 
         </div>
     </section>
@@ -20,7 +20,7 @@
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
-            <h2 class="text-center">Food Menu</h2>
+            <h2 class="text-center">Menu</h2>
 
             <?php 
 

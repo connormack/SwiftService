@@ -2,7 +2,7 @@
 
 <div class="main-content">
 <div class="wrapper">
-<h1>Manage Food</h1>
+<h1>Manage Menu Items</h1>
 <br>
             <br>
             <?php
@@ -38,7 +38,7 @@
             <br>
 
             <!-- button for adding category -->
-            <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary"> Add Food </a>
+            <a href="<?php echo SITEURL; ?>admin/add-food.php" class="btn-primary"> Add Item </a>
             <br>
             <br>
             <table class="tbl-full">
@@ -98,8 +98,8 @@
                         <td><?php echo $featured;?></td>
                         <td><?php echo $active;?></td>
                         <td>
-                        <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id;?>" class="btn-secondary">Update Food</a>
-                        <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>"class="btn-danger">Delete Food</a>
+                        <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id;?>" class="btn-secondary">Update Item</a>
+                        <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id;?>&image_name=<?php echo $image_name;?>"class="btn-danger">Delete Item</a>
                         </td>
                     </tr>
                         <?php

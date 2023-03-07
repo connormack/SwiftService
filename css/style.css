@@ -128,6 +128,31 @@ a:hover{
     color: white;
     background-color: #ff4757;
 }
+
+.btn-Landing{
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    
+}
+.btn-primary:hover{
+    color: lightgrey;
+    background-color: #ff4757;
+}
+
+.landing-button{
+    text-align: center;
+    background-color: grey;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+}
+
+.landing-button:hover{
+    color: lightgrey;
+    background-color: #ff4757;
+}
+
 h2{
     color: #2f3542;
     font-size: 2rem;

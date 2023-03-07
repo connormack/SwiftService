@@ -19,7 +19,7 @@
             <table class="tbl-full">
                 <tr>
                 <th>S.N</th>
-                <th>Food  </th>
+                <th>Item</th>
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Total</th>

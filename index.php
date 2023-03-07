@@ -9,7 +9,7 @@ include('partials-front/menu.php');
           <input
             type="search"
             name="search"
-            placeholder="Search for Food.."
+            placeholder="Search menu..."
             required
           />
           <input
@@ -37,7 +37,9 @@ include('partials-front/menu.php');
     <!-- CAtegories Section Starts Here -->
     <section class="categories">
       <div class="container">
-        <h2 class="text-center">Explore Foods</h2>
+        <h1 class="fail text-center">Welcome to the UWE Arms</h1>
+        <br>
+        <h2 class="text-center">Explore Menu</h2>
 
         <?php 
 
@@ -105,7 +107,7 @@ include('partials-front/menu.php');
     <!-- fOOD MEnu Section Starts Here -->
     <section class="food-menu">
       <div class="container">
-        <h2 class="text-center">Food Menu</h2>
+        <h2 class="text-center">Popular Choices</h2>
 
         <?php 
 
@@ -181,7 +183,7 @@ include('partials-front/menu.php');
       </div>
 
       <p class="text-center">
-        <a href="<?php echo SITEURL;?>foods.php">See All Foods</a>
+        <a href="<?php echo SITEURL;?>foods.php">See Full Menu</a>
       </p>
     </section>
     <!-- fOOD Menu Section Ends Here -->

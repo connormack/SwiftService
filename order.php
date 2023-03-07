@@ -1,7 +1,5 @@
 <?php include('partials-front/menu.php');?>
-
 <?php
-
 // check if food id set
 if(isset($_GET['food_id']))
 {
@@ -41,23 +39,18 @@ else
   // redirect to home page
   header('location:'.SITEURL);
 }
-
 ?>
-
     <!-- fOOD sEARCH Section Starts Here -->
     <section class="food-search">
       <div class="container">
         <h2 class="text-center text-white">
-          Fill this form to confirm your order.
+          Complete this form to confirm your order.
         </h2>
-
         <form action="" method="POST" class="order">
           <fieldset>
-            <legend>Selected Food</legend>
-
+            <legend>Selected Item</legend>
             <div class="food-menu-img">
               <?php 
-
               // check if image is found
               if($image_name=="")
               {
@@ -78,7 +71,6 @@ else
               
               ?>
             </div>
-
             <div class="food-menu-desc">
               <h3><?php echo $title;?></h3>
               <input type="hidden" name="food" value="<?php echo $title;?>">
@@ -98,7 +90,7 @@ else
           </fieldset>
 
           <fieldset>
-            <legend>Delivery Details</legend>
+            <legend>Order Details</legend>
             <div class="order-label">Full Name</div>
             <input
               type="text"
@@ -130,17 +122,43 @@ else
               class="input-responsive"
               required
             ></input>
+
+            <div class="order-label">Card Number</div>
+            <input
+              type="text"
+              name="tab"
+              placeholder="xxxx xxxx xxxx xxxx"
+              class="input-responsive"
+              required
+            ></input>
+
+            <div class="order-label">Expiry Date</div>
+            <input
+              type="text"
+              name="tab"
+              placeholder="MM/YY"
+              class="input-responsive"
+              required
+            ></input>
+
+            <div class="order-label">Security Code</div>
+            <input
+              type="text"
+              placeholder="xxx"
+              class="input-responsive"
+              required
+            ></input>
+
             <input
               type="submit"
               name="submit"
               value="Confirm Order"
               class="btn btn-primary"
-            />
+            />            
           </fieldset>
         </form>
-
-        <?php
-
+         <?php
+         ob_start();
         // check if submit button is clicked
         if(isset($_POST['submit']))
         {
@@ -179,17 +197,18 @@ else
           if($res2==true)
           {
             // query executed and order saved
-            $_SESSION['order'] = "<div class='success text-center'>Food Ordered Successfully.</div>";
+            $_SESSION['order'] = "<div class='success text-center'>Order Has Been Successfully.</div>";
             header('location:'.SITEURL);
+            // fix "Warning: Cannot modify header information - headers already sent by " error found here : https://www.youtube.com/watch?v=No7XfRi3yi8
+            echo '<script> window.location.href = "http://localhost/SDP/"; </script>';
           }
           else
           {
             // failed to save order
-            $_SESSION['order'] = "<div class='fail text-center'>Failed to order food.</div>";
+            $_SESSION['order'] = "<div class='fail text-center'>Order Has Failed</div>";
             header('location:'.SITEURL);
           }
         }
-
         ?>
 
 
