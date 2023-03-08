@@ -62,7 +62,7 @@
                                 {
                                     // image available
                                     ?>
-                                    <img src="<?php echo SITEURL;?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Momo" class="img-responsive img-curve">
+                                    <img src="<?php echo SITEURL;?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Momo" height="135" width="125" class="img-responsive img-curve">
                                     <?php
                                 }
                                 ?>

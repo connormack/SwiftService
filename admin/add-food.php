@@ -159,6 +159,7 @@
                         $source_path = $_FILES['image']['tmp_name'];
 
                         $destination_path = "../images/food/".$image_name;
+                        
 
                         // finally upload the image
                         $upload = move_uploaded_file($source_path, $destination_path);
@@ -201,13 +202,13 @@
                     if($res2==true)
                     {
                         // query executed and food added
-                        $_SESSION['add'] = "<div class='success'>Food Added Successfully.</div>";
+                        $_SESSION['add'] = "<div class='success'>Menu Item Added Successfully.</div>";
                         header('location:'.SITEURL.'admin/manage-food.php');
                     }
                     else
                     {
                         // failed to add food
-                        $_SESSION['add'] = "<div class='fail'>Failed to add food.</div>";
+                        $_SESSION['add'] = "<div class='fail'>Failed to add menu item.</div>";
                         header('location:'.SITEURL.'admin/add-food.php');
                     }
 

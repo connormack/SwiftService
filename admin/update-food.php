@@ -299,14 +299,14 @@
             if($res3==true)
             {
                 // query executed and food updated
-                $_SESSION['update'] = "<div class='success'>Food updated successfully.</div>";
+                $_SESSION['update'] = "<div class='success'>Menu Item updated successfully.</div>";
                 // redirect to manage food page
                 header('location:'.SITEURL.'admin/manage-food.php');
             }
             else
             {
                 // failed to update food
-                $_SESSION['update'] = "<div class='fail'>Failed to update food.</div>";
+                $_SESSION['update'] = "<div class='fail'>Failed to update Menu item.</div>";
                 // redirect to manage food page
                 header('location:'.SITEURL.'admin/manage-food.php');
             }

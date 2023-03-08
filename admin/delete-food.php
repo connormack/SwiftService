@@ -40,12 +40,12 @@ if(isset($_GET['id']) && isset($_GET['image_name']))
     if($res==true)
     {
         // query run and food deleted
-        $_SESSION['delete'] = "<div class='success'>Food item deleted successfully.</div>";
+        $_SESSION['delete'] = "<div class='success'>Menu item deleted successfully.</div>";
         header('location:'.SITEURL.'admin/manage-food.php');
     }
     else{
         // failed to delete food
-        $_SESSION['delete'] = "<div class='fail'>Failed to delete food item.</div>";
+        $_SESSION['delete'] = "<div class='fail'>Failed to delete Menu item.</div>";
         header('location:'.SITEURL.'admin/manage-food.php');
     }
 
