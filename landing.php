@@ -30,13 +30,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <div class ="main content">
         <div class="wrapper">
             <div class = "container2">
-            <img src="http://localhost/SDP/images/landing/Pasta.jpg" alt="Pasta"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Taco.jpg" alt="Taco"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Ramen.jpg" alt="Ramen"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Burger.jpg" alt="Burger"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Curry.jpg" alt="Curry"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Pizza.jpg" alt="Pizza"  class="img1"/>
-            <img src="http://localhost/SDP/images/landing/Fish.jpg" alt="Fish"  class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Pasta.jpg" alt="Pasta"  height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Taco.jpg" alt="Taco" height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Ramen.jpg" alt="Ramen"  height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Burger.jpg" alt="Burger"  height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Curry.jpg" alt="Curry"  height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Pizza.jpg" alt="Pizza"  height="135" width="125" class="img1"/>
+            <img src="http://localhost/SDP/images/landing/Fish.jpg" alt="Fish"  height="135" width="125" class="img1"/>
 
             </div>
             <div>

@@ -87,7 +87,7 @@
                             if($image_name!=""){
                                 // display image
                                 ?>
-                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" width="100px">
+                                <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" height="135" width="125">
                                 <?php
                             }
                             else{

@@ -149,7 +149,7 @@ include('partials-front/menu.php');
                 {
                   // image available
                   ?>
-                  <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                  <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" height="135" width="125" class="img-responsive img-curve">
                   <?php
                 }
                 
