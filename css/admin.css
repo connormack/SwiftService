@@ -155,3 +155,40 @@ table tr td{
     margin: 10% auto;
     padding: 2%;
 }
+
+/* For Cypress testing */
+.username{
+    background-color: white;
+}
+
+.password{
+    background-color: white;
+}
+
+.qty{
+    background-color: white;
+}
+
+.total{
+    background-color: white;
+}
+
+.status{
+    background-color: white;
+}
+
+.name{
+    background-color: white;
+}
+
+.email{
+    background-color: white;
+}
+
+.contact{
+    background-color: white;
+}
+
+.table-number{
+    background-color: white;
+}

@@ -31,12 +31,12 @@
         <form action="" method="POST">
             Username:
             <br>
-            <input type="text" name="username" placeholder="Enter Username">
+            <input class="username" type="text" name="username" placeholder="Enter Username">
             <br>
             <br>
             Password:
             <br>
-            <input type="password" name="password" placeholder="Enter Password">
+            <input class="password" type="password" name="password" placeholder="Enter Password">
             <br>
             <br>
             <input type="submit" name="submit" value ="login" class="btn-primary">
@@ -74,7 +74,7 @@ if(isset($_POST['submit']))
 
     if($count==1){
         //user found and logged in 
-        $_SESSION['login'] = "<div class= 'success'> Login Success. </div>";
+        $_SESSION['login'] = "<div class= 'success'>Login Success.</div>";
         $_SESSION['user'] = $username; // check is user is loogin in and logout unsets it 
 
 

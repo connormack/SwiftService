@@ -306,6 +306,35 @@ fieldset{
     font-weight: bold;
 }
 
+/* CSS for cypress test */
+
+.full-name{
+    background-color: white;
+}
+
+.phone{
+    background-color: white;
+}
+
+.email{
+    background-color: white;
+}
+
+.table-number{
+    background-color: white;
+}
+
+.card-number{
+    background-color: white;
+}
+
+.card-expiry{
+    background-color: white;
+}
+
+.security-code{
+    background-color: white;
+}
 
 
 /* CSS for Mobile Size or Smaller Screen */

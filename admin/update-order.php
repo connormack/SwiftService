@@ -64,20 +64,20 @@
             <tr>
                 <td>Quantity: </td>
                 <td>
-                    <input type="number" name="qty" value="<?php echo $qty; ?>">
+                    <input class="qty" type="number" name="qty" value="<?php echo $qty; ?>">
                 </td>
             </tr>
 
             <tr>
                 <td>Total: </td>
                 <td>
-                    <input type="text" name="total" value="<?php echo "£" .  $total; ?>">
+                    <input class="total" type="text" name="total" value="<?php echo "£" .  $total; ?>">
                 </td>
 
             <tr>
                 <td>Status: </td>
                 <td>
-                    <select name="status">
+                    <select class="status" name="status">
                         <option <?php if($status=="Ordered"){echo "selected";} ?> value="Ordered">Ordered</option>
                         <option <?php if($status=="Preparing Order"){echo "selected";} ?> value="Preparing Order">Preparing Order</option>
                         <option <?php if($status=="Completed"){echo "selected";} ?> value="Completed">Completed</option>
@@ -89,28 +89,28 @@
             <tr>
                 <td>Customer Name: </td>
                 <td>
-                    <input type="text" name="customer_name" value="<?php echo $customer_name; ?>">
+                    <input class="name" type="text" name="customer_name" value="<?php echo $customer_name; ?>">
                 </td>
             </tr>
 
             <tr>
                 <td>Customer Contact: </td>
                 <td>
-                    <input type="text" name="customer_contact" value="<?php echo $customer_contact; ?>">
+                    <input class="contact" type="text" name="customer_contact" value="<?php echo $customer_contact; ?>">
                 </td>
             </tr>
 
             <tr>
                 <td>Customer Email: </td>
                 <td>
-                    <input type="text" name="customer_email" value="<?php echo $customer_email; ?>">
+                    <input class="email" type="text" name="customer_email" value="<?php echo $customer_email; ?>">
                 </td>
             </tr>
 
             <tr>
                 <td>Table Number: </td>
                 <td>
-                    <input name="table_number" type ="text" value="<?php echo $table_number;?>">
+                    <input class="table-number" name="table_number" type ="text" value="<?php echo $table_number;?>">
                 </td>
             <tr>
                 <td colspan="2">

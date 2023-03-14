@@ -95,7 +95,7 @@ else
             <input
               type="text"
               name="customer_name"
-              class="input-responsive"
+              class="input-responsive full-name"
               required
             />
 
@@ -103,7 +103,7 @@ else
             <input
               type="tel"
               name="customer_contact"
-              class="input-responsive"
+              class="input-responsive phone"
               required
             />
 
@@ -111,7 +111,7 @@ else
             <input
               type="email"
               name="customer_email"
-              class="input-responsive"
+              class="input-responsive email"
               required
             />
 
@@ -119,7 +119,7 @@ else
             <input
               type="number"
               name="table_number"
-              class="input-responsive"
+              class="input-responsive table-number"
               required
             ></input>
 
@@ -128,7 +128,7 @@ else
               type="text"
               name="tab"
               placeholder="xxxx xxxx xxxx xxxx"
-              class="input-responsive"
+              class="input-responsive card-number"
               required
             ></input>
 
@@ -137,7 +137,7 @@ else
               type="text"
               name="tab"
               placeholder="MM/YY"
-              class="input-responsive"
+              class="input-responsive card-expiry"
               required
             ></input>
 
@@ -145,7 +145,7 @@ else
             <input
               type="text"
               placeholder="xxx"
-              class="input-responsive"
+              class="input-responsive security-code"
               required
             ></input>
 
@@ -197,7 +197,7 @@ else
           if($res2==true)
           {
             // query executed and order saved
-            $_SESSION['order'] = "<div class='success text-center'>Order Has Been Successfully.</div>";
+            $_SESSION['order'] = "<div class='success text-center'>Order Has Been Successful.</div>";
             header('location:'.SITEURL);
             // fix "Warning: Cannot modify header information - headers already sent by " error found here : https://www.youtube.com/watch?v=No7XfRi3yi8
             echo '<script> window.location.href = "http://localhost/SDP/"; </script>';
