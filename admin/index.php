@@ -1,3 +1,6 @@
+<!-- REFRENCE - I used a tutorial to help me with the project. acknowledgement must be given to: Vijay Thapa
+The link to the tutorial and his YouTube profile can be found here: https://www.youtube.com/watch?v=ZBgTzx46B8s&list=PLBLPjjQlnVXXBheMQrkv3UROskC0K1ctW   -->
+
 <?php include('partials/menu.php') ?>
 
     <!-- This is the main section -->

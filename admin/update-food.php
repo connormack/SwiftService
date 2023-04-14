@@ -159,7 +159,7 @@
                 <td>
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
-                    <input type="submit" name="submit" value="Update Food" class="btn-secondary">
+                    <input type="submit" name="submit" value="Update Menu" class="btn-secondary">
                 </td>
             </tr>
                         
