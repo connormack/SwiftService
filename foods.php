@@ -1,6 +1,6 @@
 <?php include('partials-front/menu.php');?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- food serach Section Starts Here -->
     <section class="food-search text-center">
         <div class="container">
             
@@ -11,11 +11,11 @@
 
         </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- food serach Section Ends Here -->
 
 
 
-    <!-- fOOD MEnu Section Starts Here -->
+    <!-- food menu Section Starts Here -->
     <section class="food-menu">
         <div class="container">
             <h2 class="text-center">Menu</h2>
@@ -25,7 +25,7 @@
             //displaying active and fetured foods
 
             // sql query to display foods
-            $sql = "SELECT * FROM tbl_food WHERE active='Yes' LIMIT 6";
+            $sql = "SELECT * FROM tbl_food WHERE active='Yes' LIMIT 12";
 
             //run query
             $res = mysqli_query($conn, $sql);

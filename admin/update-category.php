@@ -121,7 +121,6 @@
             if(isset($_POST['submit']))
             {
 
-                // echo "button clicked";
                 // get form values 
                 $id = $_POST['id'];
                 $current_image = $_POST['current_image'];

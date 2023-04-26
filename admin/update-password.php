@@ -55,7 +55,6 @@
             // check submit buttin is clicked
             if(isset($_POST['submit']))
             {
-                // echo "clicked";
 
                 // get data from form
                 $id = $_POST['id'];
@@ -102,7 +101,7 @@
                          else
                          {
                             // error message 
-                                                        //success message
+                             //success message
                             $_SESSION['change-pwd'] = "<div class ='fail'>Password failed to changed</div>";
                             // redirect 
                             header('location:'.SITEURL.'admin/manage-admin.php');

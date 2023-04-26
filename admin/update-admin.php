@@ -84,10 +84,6 @@ if (isset($_POST['submit']))
     $full_name = $_POST['full_name'];
     $username = $_POST['username'];
 
-    // $id = implode($id);
-    // $full_name = implode($full_name);
-    // $username = implode($username);
-
     //sql query
     $sql = "UPDATE tbl_admin SET 
     full_name = '$full_name',

@@ -173,7 +173,6 @@ else
           $customer_contact = $_POST['customer_contact'];
           $customer_email = $_POST['customer_email'];
           $table_number = $_POST['table_number'];
-          // $customer_address = $_POST['customer_address'];
 
           // save the order to database
           // create sql query to save order
@@ -214,6 +213,6 @@ else
 
       </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- food search Section Ends Here -->
     
     <?php include('partials-front/footer.php');?>

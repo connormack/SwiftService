@@ -27,7 +27,6 @@
         $current_active = $row2['active'];
 
         // // count rows
-        // $count2 = mysqli_num_rows($res2);
 
     }
     else
@@ -122,7 +121,6 @@
                                 $category_title = $row2['title'];
                                 $category_id = $row2['id'];
 
-                                // echo "<option value='$category_id'>$category_title</option>";
                                 ?>
 
                                 <option <?php if($current_category==$category_id){echo "selected";} ?> value="<?php echo $category_id; ?>"><?php echo $category_title; ?></option>
@@ -172,7 +170,6 @@
         // if submit button is clicked
         if(isset($_POST['submit']))
         {
-            // echo "clicked";
 
             // get all the values from our form
             $id = $_POST['id'];
@@ -209,9 +206,6 @@
             }
 
             // check whether the image is selected or not and set the value for image name accordingly
-            // print_r($_FILES['image']);
-
-            // die(); // break the code here
 
             if(isset($_FILES['image']['name']))
             {

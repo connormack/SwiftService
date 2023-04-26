@@ -100,12 +100,6 @@
                 $active = 'No';
             }
 
-            // check if a caterogy image is set and set image name 
-            // print_r($_FILES['image']);
-
-            // // exit the code 
-            // die();
-
             if(isset($_FILES['image']['name'])){
                 // upload the image using image name, source path and destination path 
                 $image_name = $_FILES['image']['name'];

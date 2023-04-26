@@ -149,9 +149,8 @@
                     if($image_name!="")
                     {
                         // // get image info 
-                        // $image_name = $_FILES['image']['name'];
-                        // auto rename our image
-                        // get the extension of our image 
+                        // auto rename image
+                        // get the extension of image 
                         $ext = end(explode('.', $image_name));
                         // rename the image
                         $image_name = "Food_Name_".rand(000, 999).'.'.$ext; // e.g. Food_Name_834.jpg

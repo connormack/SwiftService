@@ -1,12 +1,10 @@
 <?php
 include('../config/constants.php');
 
-// echo "delete";
 
 if(isset($_GET['id']) && isset($_GET['image_name']))
 {
     // get the value and delete
-    // echo "delete2";
 
     // get id and image name
     $id = $_GET['id'];

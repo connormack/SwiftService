@@ -2,7 +2,7 @@
 include('partials-front/menu.php');
 ?>
 
-    <!-- fOOD sEARCH Section Starts Here -->
+    <!-- food serach Section Starts Here -->
     <section class="food-search text-center">
       <div class="container">
         <form action="<?php echo SITEURL; ?>food-search.php" method="POST">
@@ -21,7 +21,7 @@ include('partials-front/menu.php');
         </form>
       </div>
     </section>
-    <!-- fOOD sEARCH Section Ends Here -->
+    <!-- food serach Section Ends Here -->
 
     <?php
 
@@ -104,7 +104,7 @@ include('partials-front/menu.php');
 
     
 
-    <!-- fOOD MEnu Section Starts Here -->
+    <!-- food menu Section Starts Here -->
     <section class="food-menu">
       <div class="container">
         <h2 class="text-center">Popular Choices</h2>
@@ -186,7 +186,7 @@ include('partials-front/menu.php');
         <a href="<?php echo SITEURL;?>foods.php">See Full Menu</a>
       </p>
     </section>
-    <!-- fOOD Menu Section Ends Here -->
+    <!-- food menu Section Ends Here -->
 
   <?php include('partials-front/footer.php');?>
 

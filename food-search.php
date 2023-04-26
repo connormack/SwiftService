@@ -26,7 +26,6 @@
 
 
             // get the search keyword
-            // $search = $_POST['search'];
 
             // sql query to get the foods from search
             $sql = "SELECT * FROM tbl_food WHERE title LIKE '%$search%' OR description LIKE '%$search%'";
@@ -64,7 +63,7 @@
                                     {
                                         // image available
                                         ?>
-                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" class="img-responsive img-curve">
+                                        <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name; ?>" alt="Chicke Hawain Pizza" height="135" width="125" class="img-responsive img-curve">
                                         <?php
                                     }
                                     ?>
@@ -78,7 +77,7 @@
                                 </p>
                                 <br>
 
-                                <a href="#" class="btn btn-primary">Order Now</a>
+                                <a href="<?php echo SITEURL;?>order.php?food_id=<?php echo $id; ?>" class="btn btn-primary">Order Now</a>
                             </div>
                         </div>
 
