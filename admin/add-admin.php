@@ -80,7 +80,7 @@ if(isset($_POST['submit']))
         // // instered 
         // echo"data inserted";
         // session vairbales to display message
-        $_SESSION['add'] = "User successfully added";
+        $_SESSION['add'] = "<div class='success'> Admin successfully added</div>";
         // redirect page
         header("location:".SITEURL."admin/manage-admin.php");
     } else {

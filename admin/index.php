@@ -35,7 +35,7 @@ The link to the tutorial and his YouTube profile can be found here: https://www.
 
                 <h1><?php echo $count2 ?></h1>
                 <br>
-                Menu Items
+                Menu Categories
             </div>
 
             <div class = "col-4 text-center" >
@@ -54,7 +54,7 @@ The link to the tutorial and his YouTube profile can be found here: https://www.
 
                 <h1><?php echo $count; ?></h1>
                 <br>
-                Categories
+                Menu Items
             </div>
 
             <div class = "col-4 text-center" >
